@@ -3,6 +3,10 @@
 	email = ikkei12.h@gmail.com
 [alias]
 	c = commit
+	co = checkout
+	p = push
+	s = stash
+	b = branch
 [commit]
 	template = .gitmessage
 [credential]
