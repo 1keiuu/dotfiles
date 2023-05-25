@@ -49,6 +49,9 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 #
 # ====================
 
+# Dockの位置を右に変更
+defaults write com.apple.dock orientation right
+
 # window効果の最大/最小を変更
 defaults write com.apple.dock mineffect -string "scale"
 
