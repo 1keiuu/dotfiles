@@ -1,0 +1,9 @@
+[user]
+	name = 1keiuu
+	email = ikkei12.h@gmail.com
+[alias]
+	c = commit
+[commit]
+	template = .gitmessage
+[credential]
+	helper = cache
