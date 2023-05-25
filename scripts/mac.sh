@@ -138,6 +138,23 @@ defaults write com.apple.menuextra.clock DateFormat -string 'EEE d MMM HH:mm'
 # Display battery level in the menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
+# change caps lock → control
+# c.f. https://hatappi.blog/entry/2018/11/29/215118
+# c.f. https://baqamore.hatenablog.com/entry/2017/01/27/200044
+# NOTE: grepの結果が2件ひっかかるので -m 1 で1件目だけを取得
+vid=$(ioreg -r -n 'Apple Internal Keyboard / Trackpad' | grep -E 'idVendor' -m 1 | awk '{ print $4 }')
+pid=$(ioreg -r -n 'Apple Internal Keyboard / Trackpad' | grep -E 'idProduct' -m 1 | awk '{ print $4 }')
+keyboard_id=${vid}-${pid}-0
+
+defaults -currentHost write -g com.apple.keyboard.modifiermapping.${keyboard_id} -array-add '
+<dict>
+  <key>HIDKeyboardModifierMappingDst</key>
+  <integer>30064771296</integer>
+  <key>HIDKeyboardModifierMappingSrc</key>
+  <integer>30064771129</integer>
+</dict>
+'
+
 for app in "Dock" \
 	"Finder" \
 	"SystemUIServer"; do
