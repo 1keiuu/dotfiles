@@ -1,7 +1,7 @@
-export PATH="$PATH:/opt/homebrew/bin" 
-
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+export PATH="$PATH:/opt/homebrew/bin" 
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PATH=$PATH:$HOME/.nodebrew/current/bin
@@ -13,9 +13,6 @@ if [ -f '/Users/s16428/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/s16428/g
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/s16428/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/s16428/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 
 [[ -d ~/.rbenv  ]] && \
@@ -29,3 +26,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
