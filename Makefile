@@ -14,5 +14,5 @@ mac:
 	sh scripts/mac.sh
 
 # create symbolic links in $HOME
-links:
+symlinks:
 	sh scripts/symlinks.sh

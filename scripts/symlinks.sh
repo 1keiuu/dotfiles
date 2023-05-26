@@ -3,7 +3,7 @@
 SCRIPT_DIR="$(cd "$("../$dirname" "$0")" && pwd)"
 
 target_files=(
-    ".Brewfile" ".gitconfig" ".zshrc"
+    ".Brewfile" ".gitconfig" ".zshrc" "iTerm.json"
     )
 
 for dotfile in "${target_files[@]}"

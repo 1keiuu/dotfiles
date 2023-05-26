@@ -14,7 +14,6 @@ if [ -f '/Users/s16428/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/s16428/g
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/s16428/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/s16428/google-cloud-sdk/completion.zsh.inc'; fi
 
-
 [[ -d ~/.rbenv  ]] && \
   export PATH=${HOME}/.rbenv/bin:${PATH} && \
   eval "$(rbenv init -)"
