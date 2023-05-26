@@ -1,13 +1,18 @@
 # Do everything.
-all: init brew mac link
+all:echo $SHELL
+	init symlinks brew mac
 
 # install packages
 init:
 	sh scripts/init.sh
 
 # bundle brew applications
-brew:
-	sh scripts/brew.sh
+dump-brew:
+	sh scripts/dump-brew.sh
+
+# install applications listed in .Brewfile
+sync-brew:
+	sh scripts/sync-brew.sh
 
 # setup macOS preferences
 mac:

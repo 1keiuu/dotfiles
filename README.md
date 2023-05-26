@@ -5,15 +5,15 @@
 $ make all
 or
 $ make init
+$ make symlinks
 $ make brew
 $ make mac
-$ make symlinks
 ```
 
 ## additional setup
 
 ### iTerm
-- load iTerm setting file(`iTerm.json`) from `iTerm2 > Preferences > General > Preferences`
+- load iTerm setting file(`settings/com.googlecode.iterm2.plist`) from `iTerm2 > Preferences > General > Preferences`
 
 ## about scripts
 #### `mac.sh`
