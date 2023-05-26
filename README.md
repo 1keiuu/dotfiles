@@ -2,9 +2,12 @@
 
 ## basic setup
 ```
-$ sh scripts/mac.sh
-$ sh symlinks.sh
-$ init.sh
+$ make all
+or
+$ make init
+$ make brew
+$ make mac
+$ make symlinks
 ```
 
 ## additional setup

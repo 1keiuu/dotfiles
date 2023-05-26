@@ -1,3 +1,5 @@
+export PATH="$PATH:/opt/homebrew/bin" 
+
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -19,7 +21,6 @@ if [ -f '/Users/s16428/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/s1
 [[ -d ~/.rbenv  ]] && \
   export PATH=${HOME}/.rbenv/bin:${PATH} && \
   eval "$(rbenv init -)"
-
 
 # pnpm
 export PNPM_HOME="/Users/s16428/Library/pnpm"
