@@ -2,7 +2,11 @@
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 export PATH="$PATH:/opt/homebrew/bin" 
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# zsh-autocomplete
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  autoload -Uz compinit && compinit
+fi
 
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 
